@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Histogram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HVF-Tl-xli">
+                                <rect key="frame" x="67.5" y="25" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Jwj-jI-2gT"/>
+                                    <constraint firstAttribute="height" constant="240" id="PeF-uM-1f1"/>
+                                </constraints>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ot2-4Y-Fsu" customClass="HistogramView" customModule="Histogram" customModuleProvider="target">
+                                <rect key="frame" x="67.5" y="275" width="240" height="100"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="43w-kQ-CRn"/>
+                                    <constraint firstAttribute="width" constant="240" id="x4Z-Jh-MZA"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Lu-Gp-NPJ">
+                                <rect key="frame" x="67.5" y="385" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="s0Z-mK-PRa"/>
+                                    <constraint firstAttribute="height" constant="100" id="skA-HW-x0b"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Xd-p1-VyF" userLabel="Image View1">
+                                <rect key="frame" x="67.5" y="495" width="240" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="NUs-WE-4xh"/>
+                                    <constraint firstAttribute="width" constant="240" id="icw-8s-Npc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH7-Ea-Ayc">
+                                <rect key="frame" x="145" y="605" width="85" height="30"/>
+                                <state key="normal" title="Next Picture"/>
+                                <connections>
+                                    <action selector="actionNextPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nTq-y1-Um6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9Xd-p1-VyF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="49Q-NS-X8G"/>
+                            <constraint firstItem="6Lu-Gp-NPJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HLf-TI-Oyu"/>
+                            <constraint firstItem="HVF-Tl-xli" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HQL-qW-qGt"/>
+                            <constraint firstItem="qH7-Ea-Ayc" firstAttribute="top" secondItem="9Xd-p1-VyF" secondAttribute="bottom" constant="10" id="Krh-tb-mLX"/>
+                            <constraint firstItem="qH7-Ea-Ayc" firstAttribute="centerX" secondItem="9Xd-p1-VyF" secondAttribute="centerX" id="LX3-Z9-gUG"/>
+                            <constraint firstItem="ot2-4Y-Fsu" firstAttribute="top" secondItem="HVF-Tl-xli" secondAttribute="bottom" constant="10" id="OGH-Ue-euG"/>
+                            <constraint firstItem="HVF-Tl-xli" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="UcD-sn-f14"/>
+                            <constraint firstItem="6Lu-Gp-NPJ" firstAttribute="top" secondItem="ot2-4Y-Fsu" secondAttribute="bottom" constant="10" id="gnU-XP-YnT"/>
+                            <constraint firstItem="9Xd-p1-VyF" firstAttribute="top" secondItem="6Lu-Gp-NPJ" secondAttribute="bottom" constant="10" id="hRp-Tz-t2b"/>
+                            <constraint firstItem="ot2-4Y-Fsu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sqB-d7-1Gw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="histogramDraw" destination="ot2-4Y-Fsu" id="Uqu-St-0Mz"/>
+                        <outlet property="histogramView" destination="6Lu-Gp-NPJ" id="yTG-wh-n1d"/>
+                        <outlet property="histogramView1" destination="9Xd-p1-VyF" id="yVE-D8-5wg"/>
+                        <outlet property="imageView" destination="HVF-Tl-xli" id="HQO-9k-hML"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="133.74384236453201"/>
+        </scene>
+    </scenes>
+</document>
