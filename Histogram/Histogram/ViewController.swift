@@ -60,7 +60,7 @@ class ViewController: UIViewController {
 	@IBOutlet weak var histogramView: UIImageView!
 	@IBOutlet weak var histogramView1: UIImageView!
 	
-	let context = CIContext()
+	let context = CIContext(options: [.workingColorSpace: NSNull()])
 
 	let names = ["Karla.jpg", "Kerze.jpg", "Gradient.png", "Radial.png", "Gaussian.png", "Linear1.png"]
 	var index = 0
